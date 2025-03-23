@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdfdfd;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(45deg, #FF6600, #FF9933);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+
+/* Navigation Styling with Custom Bullet Points */
+nav ul {
+  list-style: none;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 10px 15px;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  display: inline-block;
+  position: relative;
+  padding-left: 35px; /* Leave space for icon */
+}
+
+/* Custom bullet using pseudo-element */
+nav ul li a::before {
+  content: "➤"; /* Custom symbol - changeable */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: white;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+/* Hover effects */
+nav ul li a:hover {
+  background-color: white;
+  color: #FF6600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li a:hover::before {
+  transform: translateY(-50%) scale(1.5) rotate(15deg);
+  color: #FF6600;
+}
+
+/* Section Styling */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 30px;
+  color: #FF6600;
+  position: relative;
+  display: inline-block;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(45deg, #FF6600, #FF9933);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(45deg, #FF6600, #FF9933);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table, th, td {
+  border: 1px solid #eee;
+  padding: 15px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+th {
+  background-color: #FF6600;
+  color: white;
+}
+
+/* Forms */
+input, textarea {
+  display: block;
+  margin: 15px auto;
+  padding: 14px;
+  width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #FF6600;
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.2);
+}
+
+/* Buttons */
+.btn, button {
+  background: linear-gradient(45deg, #FF6600, #FF9933);
+  color: white;
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.btn:hover, button:hover {
+  background: linear-gradient(45deg, #FF9933, #FF6600);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 102, 0, 0.4);
+}
+
+/* Staff Profile & Gallery */
+.staff-profile, .gallery-container img {
+  margin: 20px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  display: inline-block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: white;
+}
+
+.staff-profile:hover, .gallery-container img:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.staff-profile img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.gallery-container img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Search Bars */
+#subjectSearch, #studentSearch {
+  width: 50%;
+  padding: 12px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  margin: 30px auto;
+  display: block;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#subjectSearch:focus, #studentSearch:focus {
+  border-color: #FF6600;
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.2);
+}
+
+/* iframe */
+iframe {
+  width: 90%;
+  border-radius: 15px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  section {
+    padding: 30px 10px;
+  }
+}
